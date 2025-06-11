@@ -1,0 +1,476 @@
+import {
+  Body,
+  Button,
+  Column,
+  Container,
+  Head,
+  Heading,
+  Hr,
+  Html,
+  Img,
+  Link,
+  Preview,
+  Row,
+  Section,
+  Text,
+} from '@react-email/components';
+
+interface SOC2ComplianceEmailProps {
+  recipientName?: string;
+}
+
+export const SOC2ComplianceEmail: React.FC<Readonly<SOC2ComplianceEmailProps>> = ({
+  recipientName = "there",
+}) => (
+  <Html>
+    <Head />
+    <Preview>Atica Global Inc achieves SOC 2 Type 2 compliance - Enhanced security for your operations</Preview>
+    <Body style={main}>
+      <Container style={container}>
+        {/* Header */}
+        <Section style={header}>
+          <div style={logoPlaceholder}>
+            <Text style={logoText}>ATICA LOGO</Text>
+          </div>
+          <div style={securityBadge}>
+            🔒 SOC 2 TYPE 2 CERTIFIED
+          </div>
+        </Section>
+
+        {/* Content */}
+        <Section style={content}>
+          <Text style={greeting}>
+            Hi {recipientName},
+          </Text>
+          
+          <Text style={paragraph}>
+            We're thrilled to share a significant milestone that reinforces our unwavering commitment to your trust and security. Atica Global Inc has successfully achieved <strong style={boldBlue}>SOC 2 Type 2 compliance</strong>—a testament to our dedication to operational excellence and data protection.
+          </Text>
+          
+          {/* Main Announcement */}
+          <Section style={mainAnnouncement}>
+            <Heading style={announcementTitle}>
+              🎉 SOC 2 Type 2 Compliance Achieved
+            </Heading>
+            <Text style={announcementText}>
+              This certification demonstrates our commitment to maintaining the highest standards of security, availability, processing integrity, confidentiality, and privacy for your data and operations.
+            </Text>
+          </Section>
+          
+          {/* Security Features Grid using Row and Column */}
+          <Section style={securityFeaturesSection}>
+            <Row>
+              <Column style={securityFeatureColumn}>
+                <div style={securityFeature}>
+                  <div style={securityFeatureIcon}>🔐</div>
+                  <Text style={securityFeatureText}>Security Controls</Text>
+                </div>
+              </Column>
+              <Column style={securityFeatureColumn}>
+                <div style={securityFeature}>
+                  <div style={securityFeatureIcon}>⚡</div>
+                  <Text style={securityFeatureText}>High Availability</Text>
+                </div>
+              </Column>
+              <Column style={securityFeatureColumn}>
+                <div style={securityFeature}>
+                  <div style={securityFeatureIcon}>🎯</div>
+                  <Text style={securityFeatureText}>Processing Integrity</Text>
+                </div>
+              </Column>
+            </Row>
+            <Row>
+              <Column style={securityFeatureColumn}>
+                <div style={securityFeature}>
+                  <div style={securityFeatureIcon}>🛡️</div>
+                  <Text style={securityFeatureText}>Data Confidentiality</Text>
+                </div>
+              </Column>
+              <Column style={securityFeatureColumn}>
+                <div style={securityFeature}>
+                  <div style={securityFeatureIcon}>🔒</div>
+                  <Text style={securityFeatureText}>Privacy Protection</Text>
+                </div>
+              </Column>
+              <Column style={securityFeatureColumn}>
+                <div style={securityFeature}>
+                  <div style={securityFeatureIcon}>✅</div>
+                  <Text style={securityFeatureText}>Independently Verified</Text>
+                </div>
+              </Column>
+            </Row>
+          </Section>
+          
+          {/* SOC 2 Logo Placeholder */}
+          <Section style={logoSection}>
+            <div style={soc2LogoPlaceholder}>
+              <Text style={soc2LogoText}>SOC 2 TYPE 2 LOGO</Text>
+            </div>
+          </Section>
+          
+          <Text style={paragraph}>
+            SOC 2 Type 2 is the gold standard for service organizations, providing independent verification that our security controls are not only designed effectively but also operating effectively over time. This achievement means enhanced protection for your hotel operations and guest data.
+          </Text>
+          
+          {/* Benefits Section */}
+          <Section style={highlightSection}>
+            <Heading style={highlightTitle}>What this means for our partnership:</Heading>
+            
+            {/* Benefit Cards using individual Sections */}
+            <Section style={benefitCard}>
+              <div style={benefitIcon}>🔐</div>
+              <Heading style={benefitTitle}>Enhanced Data Security</Heading>
+              <Text style={benefitDescription}>
+                Your hotel and guest information is protected by industry-leading security measures that have been independently verified and continuously monitored.
+              </Text>
+            </Section>
+            
+            <Section style={benefitCard}>
+              <div style={benefitIcon}>📋</div>
+              <Heading style={benefitTitle}>Regulatory Compliance Support</Heading>
+              <Text style={benefitDescription}>
+                Our SOC 2 Type 2 certification helps you meet your own compliance requirements and provides assurance to your stakeholders.
+              </Text>
+            </Section>
+            
+            <Section style={benefitCard}>
+              <div style={benefitIcon}>⚙️</div>
+              <Heading style={benefitTitle}>Operational Reliability</Heading>
+              <Text style={benefitDescription}>
+                Proven processes ensure consistent, reliable service delivery for your critical hotel management systems.
+              </Text>
+            </Section>
+            
+            <Section style={benefitCard}>
+              <div style={benefitIcon}>🏆</div>
+              <Heading style={benefitTitle}>Competitive Advantage</Heading>
+              <Text style={benefitDescription}>
+                Partner with confidence knowing you're working with a security-certified technology provider committed to excellence.
+              </Text>
+            </Section>
+            
+            <Section style={benefitCard}>
+              <div style={benefitIcon}>📊</div>
+              <Heading style={benefitTitle}>Transparent Reporting</Heading>
+              <Text style={benefitDescription}>
+                Access to detailed security reports and documentation to support your due diligence processes and audit requirements.
+              </Text>
+            </Section>
+          </Section>
+          
+          {/* Closing Message */}
+          <Section style={closingMessage}>
+            <Text style={paragraph}>
+              Thank you for being a valued partner in this journey. Your trust drives our commitment to excellence, and this certification is just another step in ensuring we exceed your expectations for security and reliability.
+            </Text>
+            
+            <Text style={quote}>
+              "We're not just protecting data—we're protecting the trust you place in us every day."
+            </Text>
+          </Section>
+          
+          <Hr style={divider} />
+          
+          {/* Signature */}
+          <Section style={signature}>
+            <Text style={signatureName}>Akash Goel</Text>
+            <Text style={signatureTitle}>Chief Executive Officer</Text>
+            <Text style={companyName}>Atica Global Inc</Text>
+          </Section>
+        </Section>
+        
+        <Hr style={divider} />
+        
+        {/* Footer */}
+        <Section style={footer}>
+          <Text style={footerText}>
+            <strong>Atica Global Inc</strong>
+          </Text>
+          <Text style={footerText}>
+            1234 Business Avenue, Suite 500, Business City, BC 12345
+          </Text>
+          <Text style={footerText}>
+            Phone: (555) 123-4567 | Email: info@aticaglobal.com
+          </Text>
+          
+          <Text style={copyright}>
+            © 2025 Atica Global Inc. All rights reserved.
+          </Text>
+          <Text style={copyright}>
+            SOC 2 Type 2 certification achieved through independent audit by certified third-party assessors.
+          </Text>
+        </Section>
+      </Container>
+    </Body>
+  </Html>
+);
+
+export default SOC2ComplianceEmail;
+
+// Styles
+const main = {
+  fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+  lineHeight: '1.6',
+  backgroundColor: '#f8fafc',
+  color: '#2F2F2F',
+};
+
+const container = {
+  maxWidth: '650px',
+  margin: '20px auto',
+  backgroundColor: '#ffffff',
+  borderRadius: '16px',
+  overflow: 'hidden',
+  boxShadow: '0 10px 40px rgba(0, 74, 152, 0.1)',
+};
+
+const header = {
+  background: 'linear-gradient(135deg, #004A98 0%, #1C4587 50%, #1155CC 100%)',
+  padding: '40px',
+  textAlign: 'center' as const,
+};
+
+const logoPlaceholder = {
+  backgroundColor: 'rgba(255,255,255,0.2)',
+  padding: '15px 30px',
+  borderRadius: '8px',
+  border: '2px dashed rgba(255,255,255,0.5)',
+  marginBottom: '20px',
+  display: 'inline-block',
+};
+
+const logoText = {
+  color: '#ffffff',
+  fontSize: '18px',
+  fontWeight: '600',
+  margin: '0',
+};
+
+const securityBadge = {
+  backgroundColor: '#A4C2F4',
+  color: '#004A98',
+  padding: '12px 24px',
+  borderRadius: '50px',
+  fontSize: '14px',
+  fontWeight: '600',
+  display: 'inline-block',
+  border: '1px solid rgba(255, 255, 255, 0.2)',
+};
+
+const content = {
+  padding: '40px',
+};
+
+const greeting = {
+  fontSize: '18px',
+  fontWeight: '500',
+  marginBottom: '20px',
+  color: '#1C4587',
+};
+
+const paragraph = {
+  fontSize: '16px',
+  lineHeight: '1.6',
+  margin: '0 0 16px 0',
+  color: '#2F2F2F',
+};
+
+const boldBlue = {
+  color: '#004A98',
+  fontWeight: '600',
+};
+
+const mainAnnouncement = {
+  backgroundColor: '#EFF6FF',
+  padding: '30px',
+  borderRadius: '12px',
+  margin: '30px 0',
+  border: '1px solid rgba(109, 158, 235, 0.2)',
+  borderLeft: '4px solid #004A98',
+};
+
+const announcementTitle = {
+  color: '#004A98',
+  fontSize: '24px',
+  fontWeight: '700',
+  margin: '0 0 16px 0',
+  lineHeight: '1.3',
+};
+
+const announcementText = {
+  margin: '0',
+  fontSize: '16px',
+  lineHeight: '1.5',
+  color: '#2F2F2F',
+};
+
+const securityFeaturesSection = {
+  margin: '30px 0',
+};
+
+const securityFeatureColumn = {
+  padding: '5px',
+};
+
+const securityFeature = {
+  backgroundColor: '#ffffff',
+  padding: '20px',
+  borderRadius: '8px',
+  textAlign: 'center' as const,
+  border: '1px solid rgba(109, 158, 235, 0.1)',
+  margin: '5px 0',
+};
+
+const securityFeatureIcon = {
+  fontSize: '24px',
+  marginBottom: '8px',
+};
+
+const securityFeatureText = {
+  fontSize: '13px',
+  fontWeight: '600',
+  color: '#1C4587',
+  margin: '0',
+};
+
+const logoSection = {
+  textAlign: 'center' as const,
+  margin: '30px 0',
+};
+
+const soc2LogoPlaceholder = {
+  backgroundColor: '#EFF6FF',
+  padding: '20px',
+  borderRadius: '8px',
+  border: '2px dashed #6D9EEB',
+  display: 'inline-block',
+};
+
+const soc2LogoText = {
+  color: '#004A98',
+  fontSize: '14px',
+  fontWeight: '600',
+  margin: '0',
+};
+
+const highlightSection = {
+  backgroundColor: 'rgba(17, 85, 204, 0.03)',
+  padding: '30px',
+  borderRadius: '12px',
+  margin: '30px 0',
+  borderLeft: '4px solid #1155CC',
+};
+
+const highlightTitle = {
+  fontSize: '18px',
+  fontWeight: '600',
+  color: '#004A98',
+  margin: '0 0 20px 0',
+  lineHeight: '1.3',
+};
+
+const benefitCard = {
+  backgroundColor: '#ffffff',
+  padding: '24px',
+  borderRadius: '8px',
+  border: '1px solid rgba(109, 158, 235, 0.1)',
+  margin: '16px 0',
+};
+
+const benefitIcon = {
+  width: '36px',
+  height: '36px',
+  backgroundColor: '#6D9EEB',
+  borderRadius: '8px',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  marginBottom: '12px',
+  fontSize: '18px',
+};
+
+const benefitTitle = {
+  fontSize: '16px',
+  fontWeight: '600',
+  color: '#004A98',
+  margin: '0 0 8px 0',
+  lineHeight: '1.3',
+};
+
+const benefitDescription = {
+  fontSize: '14px',
+  lineHeight: '1.4',
+  color: '#2F2F2F',
+  margin: '0',
+};
+
+const closingMessage = {
+  backgroundColor: '#EFF6FF',
+  padding: '30px',
+  borderRadius: '12px',
+  margin: '30px 0',
+  textAlign: 'center' as const,
+  border: '1px solid rgba(109, 158, 235, 0.2)',
+};
+
+const quote = {
+  fontStyle: 'italic',
+  color: '#1C4587',
+  fontSize: '18px',
+  fontWeight: '500',
+  margin: '20px 0 0 0',
+  lineHeight: '1.4',
+};
+
+const divider = {
+  borderColor: 'rgba(109, 158, 235, 0.2)',
+  margin: '20px 0',
+};
+
+const signature = {
+  padding: '20px',
+  backgroundColor: 'rgba(0, 74, 152, 0.02)',
+  borderRadius: '8px',
+  border: '1px solid rgba(109, 158, 235, 0.1)',
+  margin: '20px 0',
+};
+
+const signatureName = {
+  fontSize: '18px',
+  fontWeight: '700',
+  color: '#004A98',
+  margin: '0 0 4px 0',
+};
+
+const signatureTitle = {
+  fontSize: '14px',
+  color: '#1C4587',
+  margin: '0 0 4px 0',
+};
+
+const companyName = {
+  fontSize: '14px',
+  color: '#004A98',
+  fontWeight: '600',
+  margin: '0',
+};
+
+const footer = {
+  backgroundColor: '#f8fafc',
+  padding: '30px',
+  textAlign: 'center' as const,
+  borderTop: '1px solid rgba(109, 158, 235, 0.1)',
+};
+
+const footerText = {
+  fontSize: '14px',
+  color: '#1C4587',
+  margin: '0 0 8px 0',
+};
+
+const copyright = {
+  fontSize: '12px',
+  color: '#1C4587',
+  opacity: 0.8,
+  margin: '4px 0',
+};
