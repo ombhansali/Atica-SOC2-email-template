@@ -111,6 +111,11 @@ export const SOC2ComplianceEmail: React.FC<Readonly<SOC2ComplianceEmailProps>> =
           <Text style={paragraph}>
             SOC 2 Type 2 is the gold standard for service organizations, providing independent verification that our security controls are not only designed effectively but also operating effectively over time. This achievement means enhanced protection for your hotel operations and guest data.
           </Text>
+
+          <Text style={paragraph}>
+          If you'd like to view our full SOC 2 Type 2 compliance report, you can{" "}
+          <Link href="trust.aticaglobal.com" style={linkStyle}>click here</Link>.
+          </Text>
           
           {/* Benefits Section */}
           <Section style={highlightSection}>
@@ -473,4 +478,9 @@ const copyright = {
   color: '#1C4587',
   opacity: 0.8,
   margin: '4px 0',
+};
+const linkStyle = {
+  color: '#1155CC',
+  textDecoration: 'underline',
+  fontWeight: 500,
 };
